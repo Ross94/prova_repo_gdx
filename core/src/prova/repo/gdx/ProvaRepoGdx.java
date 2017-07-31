@@ -6,6 +6,9 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ProvaRepoGdx extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
@@ -13,7 +16,7 @@ public class ProvaRepoGdx extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		img = new Texture("gufo.jpg");
 	}
 
 	@Override
@@ -30,4 +33,10 @@ public class ProvaRepoGdx extends ApplicationAdapter {
 		batch.dispose();
 		img.dispose();
 	}
+
+	private void testJava8() {
+		List<Integer> ints = new ArrayList<Integer>();
+		ints.forEach(e->System.out.println("Java8!"));
+	}
+
 }
